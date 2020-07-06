@@ -124,7 +124,7 @@ const postArticleAddComments = async (req, res) => {
   const output = {
     success: false,
   };
-  console.log(req.body);
+  // console.log(req.body);
   const sql =
     "INSERT INTO `articlecomments`(`articleId`, `memberId`, `memberName`, `content`, `memberImg`) VALUES (?,?,?,?,?) ";
   db.query(sql, [
