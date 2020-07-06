@@ -96,14 +96,16 @@ const InsertCheckOutPage = (req, res) => {
 };
 
 const UpdateUser = (req, res) => {
-  // console.log(req.body.data)
+  console.log(req.body.data)
+
+
   const output = {
     success: false
   }
   for (let i of [req.body.data]) {
     i.memberAddress ?
-    i.memberAddress = req.body.city + req.body.contury + req.body.data.memberAddress :
-    i.memberAddress =''
+      i.memberAddress = req.body.data.memberAddress :
+      i.memberAddress = ''
   }
   const sql = `UPDATE user SET  ? WHERE id = ? `;
   db.query(sql, [req.body.data, req.body.memberid])
@@ -114,8 +116,9 @@ const UpdateUser = (req, res) => {
       }
       res.json(output);
     })
-
 }
+
+
 
 
 
