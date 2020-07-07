@@ -122,6 +122,7 @@ const test = async (req, res) => {
   });
 };
 
+
 const InsertCheckOutPage = (req, res) => {
   console.log("data" + req.body.data.Member);
   const output = {
@@ -199,7 +200,7 @@ const ordres = (req, res) => {
   const sql =
     "INSERT INTO `orders`(`Total`, `PayMentMethod`, `MemberId`,`OrderStatus`, `CustomerService`, `CancelStatus`) VALUES (?,?,?,1,1,1)";
   db.query(sql, [
-    req.body.orders.Total,
+    req.body.orders.Total - 777,
     req.body.orders.pay,
     req.body.orders.Member,
   ]);
