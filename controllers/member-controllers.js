@@ -96,7 +96,7 @@ const InsertCheckOutPage = (req, res) => {
 };
 
 const UpdateUser = (req, res) => {
-  console.log(req.body.data)
+  // console.log(req.body.data)
 
 
   const output = {

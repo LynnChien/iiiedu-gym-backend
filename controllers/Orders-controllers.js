@@ -40,7 +40,7 @@ const GetApi = async (req) => {
 const getapi = async (req, res) => {
   const output = await GetApi(req);
   res.json(output);
-  console.log(output);
+  // console.log(output);
 };
 
 const GetDeatailApi = async (req) => {
@@ -108,7 +108,7 @@ const addCheckOutPage = async (req, res) => {
 };
 
 const test = async (req, res) => {
-  console.log(res);
+  // console.log(res);
   const output = {
     success: false,
   };
@@ -124,7 +124,7 @@ const test = async (req, res) => {
 
 
 const InsertCheckOutPage = (req, res) => {
-  console.log("data" + req.body.data.Member);
+  // console.log("data" + req.body.data.Member);
   const output = {
     success: false,
   };
